@@ -1,0 +1,36 @@
+.calculator {
+  display: grid;
+  gap: var(--space-100);
+}
+
+.savings-estimate {
+  display: flex;
+  align-items: center;
+}
+
+.lead {
+  display: grid;
+  gap: var(--space-100);
+}
+
+@media screen and (min-width: 860px) {
+  .calculator {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .savings-estimate {
+    grid-column: span 2;
+  }
+
+  .lead {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .lead-header {
+    grid-column: span 2;
+  }
+
+  .address {
+    grid-column: span 2;
+  }
+}
