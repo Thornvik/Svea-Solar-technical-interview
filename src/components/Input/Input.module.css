@@ -1,0 +1,31 @@
+.root {
+  width: 100%;
+  display: grid;
+  gap: var(--space-50);
+}
+
+.label {
+  font-size: var(--font-size-200);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  background-color: white;
+  border: 1px solid black;
+  padding: var(--space-100);
+  color: black;
+}
+
+.input:focus {
+  outline: 2px solid blue;
+}
+
+.input-error {
+  border: 2px solid red;
+}
