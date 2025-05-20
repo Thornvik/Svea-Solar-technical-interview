@@ -1,0 +1,24 @@
+.root {
+  font-size: var(--font-size-100);
+  font-family: inherit;
+  line-height: 125%;
+  border: 2px solid black;
+  background-color: transparent;
+  cursor: pointer;
+  color: black;
+  padding: var(--space-100);
+}
+
+.root:hover {
+  border-color: #007d9d;
+  background-color: #b9f1ff;
+}
+
+.root:focus {
+  outline: 2px solid blue;  
+}
+
+.root:disabled {
+  border-color: grey;
+  background-color: rgb(202, 202, 202);
+}
