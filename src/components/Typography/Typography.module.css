@@ -1,0 +1,59 @@
+.typography {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.h1 {
+  font-size: var(--font-size-500);
+  line-height: 1.1;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  hyphens: auto;
+}
+
+.h2 {
+  font-size: var(--font-size-400);
+  line-height: 1.15;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+  hyphens: auto;
+}
+
+.h3 {
+  font-size: var(--font-size-300);
+  line-height: 1.25;
+  font-weight: 500;
+  hyphens: auto;
+}
+
+.h4 {
+  font-size: var(--font-size-200);
+  line-height: 1.35;
+  font-weight: 500;
+  hyphens: auto;
+}
+
+.h5 {
+  font-size: var(--font-size-100);
+  line-height: 1.35;
+  font-weight: 500;
+}
+
+.body1,
+.default {
+  font-size: var(--font-size-300);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.body2 {
+  font-size: var(--font-size-100);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+.label1 {
+  font-size: var(--font-size-100);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
