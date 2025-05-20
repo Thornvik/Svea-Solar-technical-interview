@@ -1,0 +1,44 @@
+.root {
+  display: grid;
+  gap: var(--space-50);
+  height: fit-content;
+}
+
+.label {
+  font-size: var(--font-size-200);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.select-wrapper {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  cursor: pointer;
+}
+
+.select-wrapper svg {
+  position: absolute;
+  top: 50%;
+  right: var(--space-100);
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+}
+
+.select {
+  cursor: pointer;
+  width: 100%;
+  color: black;
+  background-color: transparent;
+  border: solid 1px black;
+  padding: var(--space-100);
+
+  -moz-appearance: none; /* Firefox */
+  -webkit-appearance: none; /* Safari and Chrome */
+  appearance: none;
+}
+
+.select:focus {
+  outline: 2px solid blue;
+}
