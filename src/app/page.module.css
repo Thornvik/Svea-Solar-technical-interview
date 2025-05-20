@@ -1,0 +1,25 @@
+.page {
+  padding: var(--space-200) var(--space-100);
+}
+
+.main {
+  display: grid;
+  gap: var(--space-200);
+}
+
+.calculator {
+  display: grid;
+  gap: var(--space-100);
+}
+
+.savings-estimate {
+  display: flex;
+  align-items: center;
+  grid-column: span 2;
+}
+
+@media screen and (orientation: landscape) {
+  .calculator {
+    grid-template-columns: 1fr 1fr;
+  }
+}
