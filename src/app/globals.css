@@ -1,13 +1,18 @@
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+  --space-25: clamp(0.1875rem, 0.1563rem + 0.1042vi, 0.25rem);
+  --space-50: clamp(0.375rem, 0.3125rem + 0.2083vi, 0.5rem);
+  --space-75: clamp(0.5625rem, 0.4688rem + 0.3125vi, 0.75rem);
+  --space-100: clamp(0.75rem, 0.625rem + 0.4167vi, 1rem);
+  --space-150: clamp(1.125rem, 0.9375rem + 0.625vi, 1.5rem);
+  --space-200: clamp(1.5rem, 1.25rem + 0.8333vi, 2rem);
+  --space-250: clamp(1.875rem, 1.5625rem + 1.0417vi, 2.5rem);
+  --space-300: clamp(2.25rem, 1.875rem + 1.25vi, 3rem);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-size-100: clamp(1rem, 0.9375rem + 0.2083vw, 1.125rem);
+  --font-size-200: clamp(1.125rem, 1.0625rem + 0.2083vw, 1.25rem);
+  --font-size-300: clamp(1.25rem, 1.125rem + 0.4167vw, 1.5rem);
+  --font-size-400: clamp(1.5rem, 1.25rem + 0.8333vw, 2rem);
+  --font-size-500: clamp(2.5rem, 1.75rem + 2.5vw, 4rem);
 }
 
 html,
@@ -17,8 +22,8 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: black;
+  background: white;
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
