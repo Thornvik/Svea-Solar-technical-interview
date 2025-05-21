@@ -7,9 +7,9 @@ export const useSubmitLead = () => {
   const [loading, setLoading] = useState(false);
   const router = useRouter()
 
-  const submitLead = (lead: Lead, estiamtedSavings?: number) => {
+  const submitLead = (lead: Lead, estimatedSavings?: number) => {
     setLoading(true);
-    LeadService.submitLead(lead, estiamtedSavings)
+    LeadService.submitLead(lead, estimatedSavings)
       .then(() => {
         router.push("/lead/lead-1");
       })

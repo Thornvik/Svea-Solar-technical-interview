@@ -19,5 +19,5 @@ export enum LeadFieldEnum {
 }
 
 export interface LeadWithEstimate extends Lead {
-  estimateSavings: string;
+  estimatedSavings: string;
 }

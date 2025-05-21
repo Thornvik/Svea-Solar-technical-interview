@@ -2,14 +2,14 @@ import { Lead, LeadWithEstimate } from "@/types/lead";
 import { LeadApiInterface } from "./LeadInterface";
 
 class LeadApiMock implements LeadApiInterface {
-  submitLead = (lead: Lead, estiamtedSavings?: number) => {
+  submitLead = (lead: Lead, estimatedSavings?: number) => {
     const promise = new Promise<void>((resolve) => {
       console.info(`Mock POST --- URL: ${lead}`);
 
       window.setTimeout(() => {
         localStorage.setItem(
           "lead-1",
-          JSON.stringify({...lead, estiamtedSavings })
+          JSON.stringify({...lead, estimatedSavings })
         );
 
         resolve();
