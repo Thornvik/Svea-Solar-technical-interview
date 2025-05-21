@@ -10,15 +10,22 @@
   margin-bottom: var(--space-300);
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 25px;
-  padding: var(--space-200);
+  padding: var(--space-100);
 }
 
 .banner {
   border-radius: 16px;
-  background-image: url('../../public//solar-panels.png');
+  background-image: url("../../public//solar-panels.png");
   background-size: cover;
   color: white;
+}
+
+.heading {
+  border-radius: 16px;
   padding: var(--space-200);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 @media screen and (min-width: 860px) {

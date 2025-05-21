@@ -10,7 +10,7 @@
   margin-bottom: var(--space-300);
   border-radius: 20px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 8px 25px;
-  padding: var(--space-200);
+  padding: var(--space-100);
 }
 
 .banner {
@@ -20,7 +20,7 @@
   color: white;
 }
 
-.msg {
+.heading {
   border-radius: 16px;
   padding: var(--space-200);
   width: 100%;

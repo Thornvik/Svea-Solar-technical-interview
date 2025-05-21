@@ -19,18 +19,18 @@ const LeadForm = () => {
   return (
     <div className={styles.root}>
       <div className={styles.calculator}>
+        <Typography variant="h2">Solar Calculator</Typography>
+
         <Input
           onChange={({ target }) => setCurrentBill(parseInt(target.value))}
           placeholder="2000"
           type="number"
-          label="Current electricity bill"
-          hintText="Cost of your latest electricity bill in SEK"
+          label="Cost of your latest electricity bill in SEK"
         />
 
         <Select
           onChange={({ target }) => setRoofSize(target.value as RoofSizeEnum)}
-          hintText="Estimation of your roof size"
-          label="Roof size"
+          label="Estimation of your roof size"
         >
           <option value={RoofSizeEnum.SMALL}>Small</option>
           <option value={RoofSizeEnum.MEDIUM}>Medium</option>
@@ -38,9 +38,9 @@ const LeadForm = () => {
         </Select>
 
         <div className={styles["savings-estimate"]}>
-          <Typography variant="h3">Estimated Savings </Typography>
+          <Typography variant="h4">Estimated Savings </Typography>
 
-          <Typography variant="body1">
+          <Typography variant="body2">
             {calculateSavings(currentBill, roofSize)}
           </Typography>
         </div>
@@ -53,7 +53,7 @@ const LeadForm = () => {
         <div className={styles["lead-header"]}>
           <Typography variant="h2">Get a free quote</Typography>
 
-          <Typography variant="body1">
+          <Typography className={styles.grey} variant="body2">
             With complete contact details, we can calculate how much you can
             save even before we call.
           </Typography>

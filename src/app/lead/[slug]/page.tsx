@@ -13,7 +13,7 @@ export default async function Page({
     <div className={styles.root}>
       <main className={styles.main}>
         <div className={styles.banner}>
-          <Typography variant="h1" className={styles.msg}>Thank you for submitting</Typography>
+          <Typography variant="h1" className={styles.heading}>Thank you for submitting</Typography>
         </div>
 
         <Lead leadId={slug} />

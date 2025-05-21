@@ -1,6 +1,7 @@
 .root {
   display: grid;
   gap: var(--space-200);
+  padding: var(--space-100);
 }
 
 .calculator {
@@ -17,12 +18,20 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
 
 .lead {
   display: grid;
   gap: var(--space-100);
+}
+
+.lead-header {
+  display: grid;
+  gap: 8px;
+}
+
+.grey {
+  color: grey;
 }
 
 .submit {

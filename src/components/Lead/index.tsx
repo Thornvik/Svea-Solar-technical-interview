@@ -28,33 +28,54 @@ const Lead = (props: LeadProps) => {
   return (
     <div className={styles.root}>
       <div className={styles.detail}>
-        <Typography className={styles['detail-title']} variant="body2">First name:</Typography>
+        <Typography className={styles["detail-title"]} variant="body2">
+          First name:
+        </Typography>
         <Typography variant="body2">{lead?.firstName}</Typography>
       </div>
 
       <div className={styles.detail}>
-        <Typography className={styles['detail-title']}  variant="body2">Last name:</Typography>
+        <Typography className={styles["detail-title"]} variant="body2">
+          Last name:
+        </Typography>
         <Typography variant="body2">{lead?.lastName}</Typography>
       </div>
       <div className={styles.detail}>
-        <Typography className={styles['detail-title']}  variant="body2">Email:</Typography>
+        <Typography className={styles["detail-title"]} variant="body2">
+          Email:
+        </Typography>
         <Typography variant="body2">{lead?.email}</Typography>
       </div>
       <div className={styles.detail}>
-        <Typography className={styles['detail-title']}  variant="body2">Phone number:</Typography>
+        <Typography className={styles["detail-title"]} variant="body2">
+          Phone number:
+        </Typography>
         <Typography variant="body2">{lead?.phone}</Typography>
       </div>
       <div className={styles.detail}>
-        <Typography className={styles['detail-title']}  variant="body2">Address:</Typography>
+        <Typography className={styles["detail-title"]} variant="body2">
+          Address:
+        </Typography>
         <Typography variant="body2">{lead?.address}</Typography>
       </div>
       <div className={styles.detail}>
-        <Typography className={styles['detail-title']}  variant="body2">Postal code:</Typography>
+        <Typography className={styles["detail-title"]} variant="body2">
+          Postal code:
+        </Typography>
         <Typography variant="body2">{lead?.postalCode}</Typography>
       </div>
       <div className={styles.detail}>
-        <Typography className={styles['detail-title']}  variant="body2">City:</Typography>
+        <Typography className={styles["detail-title"]} variant="body2">
+          City:
+        </Typography>
         <Typography variant="body2">{lead?.city}</Typography>
+      </div>
+
+      <div className={styles.detail}>
+        <Typography className={styles["detail-title"]} variant="body2">
+          Estimated savings:
+        </Typography>
+        <Typography variant="body2">{lead?.estimatedSavings} SEK</Typography>
       </div>
     </div>
   );
