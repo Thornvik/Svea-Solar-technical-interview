@@ -2,6 +2,7 @@
   width: 100%;
   display: grid;
   gap: var(--space-50);
+  height: fit-content;
 }
 
 .label {
