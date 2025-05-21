@@ -27,13 +27,13 @@ const Lead = (props: LeadProps) => {
 
   return (
     <div className={styles.root}>
-      <Typography>{lead?.firstName}</Typography>
-      <Typography>{lead?.lastName}</Typography>
-      <Typography>{lead?.email}</Typography>
-      <Typography>{lead?.phone}</Typography>
-      <Typography>{lead?.address}</Typography>
-      <Typography>{lead?.postalCode}</Typography>
-      <Typography>{lead?.city}</Typography>
+      <Typography variant="body1">First name: {lead?.firstName}</Typography>
+      <Typography variant="body1">Last name: {lead?.lastName}</Typography>
+      <Typography variant="body1">Email: {lead?.email}</Typography>
+      <Typography variant="body1">Phone number: {lead?.phone}</Typography>
+      <Typography variant="body1">Address: {lead?.address}</Typography>
+      <Typography variant="body1">Postal code: {lead?.postalCode}</Typography>
+      <Typography variant="body1">City: {lead?.city}</Typography>
     </div>
   );
 };

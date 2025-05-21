@@ -7,12 +7,11 @@ import LeadProvider from "@/providers/LeadProvider";
 
 export default function Home() {
   return (
-    <div>
-      <header className={styles.header}>
-        <Typography variant="h1">Solar Calculator</Typography>
-      </header>
-
+    <div className={styles.root}>
       <main className={styles.main}>
+        <div className={styles.banner}>
+          <Typography variant="h1">Solar Calculator</Typography>
+        </div>
         <LeadProvider>
           <LeadForm />
         </LeadProvider>

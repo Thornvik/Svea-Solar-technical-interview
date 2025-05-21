@@ -27,11 +27,12 @@
 }
 
 .select {
+  border-radius: 5px;
   cursor: pointer;
   width: 100%;
   color: black;
-  background-color: transparent;
-  border: solid 1px black;
+  background-color: rgb(244, 244, 245);
+  border: none;
   padding: var(--space-100);
 
   -moz-appearance: none; /* Firefox */
@@ -40,5 +41,5 @@
 }
 
 .select:focus {
-  outline: 2px solid blue;
+  outline: 2px solid black;
 }

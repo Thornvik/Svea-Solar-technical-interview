@@ -6,7 +6,7 @@
 }
 
 .label {
-  font-size: var(--font-size-200);
+  font-size: var(--font-size-100);
   font-weight: 400;
   line-height: 1.25;
 }
@@ -17,16 +17,17 @@
 
 .input {
   width: 100%;
-  background-color: white;
-  border: 1px solid black;
+  background-color: rgb(244, 244, 245);
+  border: none;
+  border-radius: 5px;
   padding: var(--space-100);
   color: black;
 }
 
 .input:focus {
-  outline: 2px solid blue;
+  outline: 2px solid black;
 }
 
 .input-error {
-  border: 2px solid red;
+  border: 2px solid #e43127;
 }

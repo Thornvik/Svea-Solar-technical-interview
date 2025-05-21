@@ -1,0 +1,10 @@
+.root {
+  display: grid;
+  max-width: 800px;
+}
+
+@media screen and (min-width: 860px) {
+  .root {
+    grid-template-columns: 1fr 1fr;
+  }
+}

@@ -17,7 +17,7 @@ const LeadForm = () => {
   const { loading, submitLead } = useSubmitLead();
 
   return (
-    <>
+    <div className={styles.root}>
       <div className={styles.calculator}>
         <Input
           onChange={({ target }) => setCurrentBill(parseInt(target.value))}
@@ -38,13 +38,10 @@ const LeadForm = () => {
         </Select>
 
         <div className={styles["savings-estimate"]}>
-          <Typography variant="h3">
-            {currentBill === 0
-              ? "Update current bill to show estimated monthly savings"
-              : `Estimated monthly Savings: ${calculateSavings(
-                  currentBill,
-                  roofSize
-                )} SEK`}
+          <Typography variant="h3">Estimated Savings </Typography>
+
+          <Typography variant="body1">
+            {calculateSavings(currentBill, roofSize)}
           </Typography>
         </div>
       </div>
@@ -140,7 +137,7 @@ const LeadForm = () => {
           label="Submit"
         />
       </form>
-    </>
+    </div>
   );
 };
 
