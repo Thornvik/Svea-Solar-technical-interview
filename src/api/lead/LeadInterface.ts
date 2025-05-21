@@ -1,6 +1,6 @@
-import { Lead } from "@/types/lead";
+import { Lead, LeadWithEstimate } from "@/types/lead";
 
 export interface LeadApiInterface {
-  submitLead: (lead: Lead) => Promise<void>
-  getLead: (leadId: string) => Promise<Lead>
+  submitLead: (lead: Lead, estiamtedSavings?: number) => Promise<void>;
+  getLead: (leadId: string) => Promise<LeadWithEstimate>;
 }

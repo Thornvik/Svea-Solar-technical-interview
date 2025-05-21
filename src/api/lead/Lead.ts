@@ -1,10 +1,10 @@
-import { Lead } from "@/types/lead";
+import { Lead, LeadWithEstimate } from "@/types/lead";
 import { LeadApiInterface } from "./LeadInterface";
 
 class LeadApi implements LeadApiInterface {
-  submitLead = (lead: Lead) => {
+  submitLead = (lead: Lead, estiamtedSavings?: number,) => {
     const promise = new Promise<void>((reslove, reject) => {
-      fetch("", { method: "post", body: JSON.stringify(lead) })
+      fetch("", { method: "post", body: JSON.stringify({lead, estiamtedSavings}) })
         .then(async (res) => {
           if (!res.ok) {
             const errorResponse = await res.json();
@@ -22,7 +22,7 @@ class LeadApi implements LeadApiInterface {
   };
 
   getLead = (leadId: string) => {
-    const promise = new Promise<Lead>((reslove, reject) => {
+    const promise = new Promise<LeadWithEstimate>((reslove, reject) => {
       fetch(`url/${leadId}`)
         .then(async (res) => {
           if (!res.ok) {
@@ -31,7 +31,7 @@ class LeadApi implements LeadApiInterface {
           }
 
           const responseJson = await res.json();
-          reslove(responseJson as Lead);
+          reslove(responseJson as LeadWithEstimate);
         })
         .catch((error) => {
           reject(error);

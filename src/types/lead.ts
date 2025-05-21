@@ -17,3 +17,7 @@ export enum LeadFieldEnum {
   POSTAL_CODE = "postalCode",
   CITY = "city",
 }
+
+export interface LeadWithEstimate extends Lead {
+  estimateSavings: string;
+}
