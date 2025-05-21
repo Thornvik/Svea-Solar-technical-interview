@@ -1,3 +1,6 @@
+import isValidEmail from "@/utils/isValidEmail";
+import isValidPhoneNumber from "@/utils/isValidPhoneNumber";
+import isValidPostalCode from "@/utils/isValidPostalCode";
 import { createContext, ReactNode, useState } from "react";
 
 interface Lead {
@@ -23,7 +26,7 @@ export enum LeadFieldEnum {
 interface LeadContextValue {
   lead: Lead;
   updateLead: (field: LeadFieldEnum, value: string) => void;
-  leadErrors: Record<LeadFieldEnum, boolean> | undefined;
+  leadErrors: Map<LeadFieldEnum, boolean>;
 }
 
 export const LeadContext = createContext({} as LeadContextValue);
@@ -35,15 +38,27 @@ interface LeadProviderProps {
 const LeadProvider = (props: LeadProviderProps) => {
   const { children } = props;
   const [lead, setLead] = useState<Lead>({} as Lead);
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [leadErrors, setLeadErrors] =
-    useState<Record<LeadFieldEnum, boolean>>();
+  const [leadErrors, setLeadErrors] = useState<Map<LeadFieldEnum, boolean>>(
+    new Map()
+  );
 
   const updateLead = (field: LeadFieldEnum, value: string) => {
-    const updatedLeadValue = { ...lead, field: value };
+    const updatedLeadValue = { ...lead, [field]: value };
+    const newErrorMap = new Map(leadErrors.entries());
 
-    // TODO: validate required fields
+    if (field === LeadFieldEnum.EMAIL) {
+      newErrorMap.set(LeadFieldEnum.EMAIL, !isValidEmail(value));
+    }
 
+    if (field === LeadFieldEnum.PHONE) {
+      newErrorMap.set(LeadFieldEnum.PHONE, !isValidPhoneNumber(value));
+    }
+
+    if (field === LeadFieldEnum.POSTAL_CODE) {
+      newErrorMap.set(LeadFieldEnum.POSTAL_CODE, !isValidPostalCode(value));
+    }
+
+    setLeadErrors(newErrorMap);
     setLead(updatedLeadValue);
   };
 
