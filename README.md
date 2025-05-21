@@ -1,6 +1,13 @@
+# Svea Solar Technical interview
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
+
+First clone the project from this repo:
+```bash
+  git clone name-of-repository
+```
 
 First, run the development server:
 
@@ -16,21 +23,28 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+You can start editing the page by modifying files such as `app/page.tsx`. The pages auto-updates as you edit the files.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Implementation Choices
 
-## Learn More
+### styling
 
-To learn more about Next.js, take a look at the following resources:
+CSS moduels for a light weight and robust way to style components.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+clsx utility for constructing classname string conditionally.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### State management
 
-## Deploy on Vercel
+**React Context** for "global" states.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+**React Hooks** when needed for things such as local states or do fetch things on first render or only when required arguments are available.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Custom React Hooks** for handling api calls
+
+### Routing
+
+This project is setup using **App routing** which is the latest version of NextJS compared to the old Page router pattern.
+
+### API design patterns
+
+The app utilizes the clean code design pattern for dependency injection. Folder **api** contains *repositories* which each is a corresponding handler for each **RESTAPI** resource. It also includes an **index.ts**, from where you should access reach repository from your components. Each repository should be an exported constant for each available repository. In **index.ts** we also toggle between our **MOCK API:s** and the API:s based on if the node enviornment is **production** or not. This is to allow for transitions between mocks and the accutal API:s when developing locally and pushing to production without the developer having to manually toggle between the mocks and the API:s
