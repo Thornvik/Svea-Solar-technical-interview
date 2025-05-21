@@ -1,5 +1,5 @@
 import { LeadService } from "@/api";
-import { Lead } from "@/types/lead";
+import { Lead, LeadWithEstimate } from "@/types/lead";
 import { useState } from "react";
 import { useRouter } from 'next/navigation'
 
@@ -23,7 +23,7 @@ export const useSubmitLead = () => {
 };
 
 export const useGetLead = () => {
-  const [lead, setLead] = useState<Lead>();
+  const [lead, setLead] = useState<LeadWithEstimate>();
   const [loading, setLoading] = useState(false);
 
   const getLead = (id: string) => {

@@ -14,7 +14,7 @@ const LeadForm = () => {
   const [currentBill, setCurrentBill] = useState(0);
   const [roofSize, setRoofSize] = useState<RoofSizeEnum>(RoofSizeEnum.SMALL);
   const { lead, leadErrors, updateLead } = useContext(LeadContext);
-  const {loading, submitLead} = useSubmitLead()
+  const { loading, submitLead } = useSubmitLead();
 
   return (
     <>
@@ -49,7 +49,10 @@ const LeadForm = () => {
         </div>
       </div>
 
-      <form className={styles.lead} action={() => submitLead(lead)}>
+      <form
+        className={styles.lead}
+        action={() => submitLead(lead, calculateSavings(currentBill, roofSize))}
+      >
         <div className={styles["lead-header"]}>
           <Typography variant="h2">Get a free quote</Typography>
 
@@ -76,7 +79,9 @@ const LeadForm = () => {
         <Input
           label="Email *"
           required
-          onChange={({ target }) => updateLead(LeadFieldEnum.EMAIL, target.value)}
+          onChange={({ target }) =>
+            updateLead(LeadFieldEnum.EMAIL, target.value)
+          }
           status={leadErrors.get(LeadFieldEnum.EMAIL) ? "error" : undefined}
           supportingText={
             leadErrors.get(LeadFieldEnum.EMAIL)
@@ -87,7 +92,9 @@ const LeadForm = () => {
         <Input
           label="Phonenumber *"
           required
-          onChange={({ target }) => updateLead(LeadFieldEnum.PHONE, target.value)}
+          onChange={({ target }) =>
+            updateLead(LeadFieldEnum.PHONE, target.value)
+          }
           status={leadErrors.get(LeadFieldEnum.PHONE) ? "error" : undefined}
           supportingText={
             leadErrors.get(LeadFieldEnum.PHONE)
@@ -121,10 +128,17 @@ const LeadForm = () => {
         <Input
           label="City *"
           required
-          onChange={({ target }) => updateLead(LeadFieldEnum.CITY, target.value)}
+          onChange={({ target }) =>
+            updateLead(LeadFieldEnum.CITY, target.value)
+          }
         />
 
-        <Button disabled={loading} type="submit" className={styles.submit} label="Submit" />
+        <Button
+          disabled={loading}
+          type="submit"
+          className={styles.submit}
+          label="Submit"
+        />
       </form>
     </>
   );

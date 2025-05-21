@@ -9,7 +9,7 @@ class LeadApiMock implements LeadApiInterface {
       window.setTimeout(() => {
         localStorage.setItem(
           "lead-1",
-          JSON.stringify({ lead, estiamtedSavings })
+          JSON.stringify({...lead, estiamtedSavings })
         );
 
         resolve();
