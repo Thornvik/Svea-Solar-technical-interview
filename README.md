@@ -47,4 +47,6 @@ This project is setup using **App routing** which is the latest version of NextJ
 
 ### API design patterns
 
-The app utilizes the clean code design pattern for dependency injection. Folder **api** contains *repositories* which each is a corresponding handler for each **RESTAPI** resource. It also includes an **index.ts**, from where you should access reach repository from your components. Each repository should be an exported constant for each available repository. In **index.ts** we also toggle between our **MOCK API:s** and the API:s based on if the node enviornment is **production** or not. This is to allow for transitions between mocks and the accutal API:s when developing locally and pushing to production without the developer having to manually toggle between the mocks and the API:s
+The app utilizes the clean code design pattern for dependency injection. Folder **api** contains *repositories* which each is a corresponding handler for each **RESTAPI** resource. It also includes an **index.ts**, from where you should access reach repository from your components. 
+
+Each repository should be an exported constant for each available repository. In **index.ts** we also toggle between our **MOCK API:s** and the API:s based on if the node enviornment is **production** or not. This is to allow for transitions between mocks and the accutal API:s when developing locally and pushing to production without the developer having to manually toggle between the mocks and the API:s
