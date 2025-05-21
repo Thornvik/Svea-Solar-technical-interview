@@ -27,13 +27,35 @@ const Lead = (props: LeadProps) => {
 
   return (
     <div className={styles.root}>
-      <Typography variant="body1">First name: {lead?.firstName}</Typography>
-      <Typography variant="body1">Last name: {lead?.lastName}</Typography>
-      <Typography variant="body1">Email: {lead?.email}</Typography>
-      <Typography variant="body1">Phone number: {lead?.phone}</Typography>
-      <Typography variant="body1">Address: {lead?.address}</Typography>
-      <Typography variant="body1">Postal code: {lead?.postalCode}</Typography>
-      <Typography variant="body1">City: {lead?.city}</Typography>
+      <div className={styles.detail}>
+        <Typography className={styles['detail-title']} variant="body2">First name:</Typography>
+        <Typography variant="body2">{lead?.firstName}</Typography>
+      </div>
+
+      <div className={styles.detail}>
+        <Typography className={styles['detail-title']}  variant="body2">Last name:</Typography>
+        <Typography variant="body2">{lead?.lastName}</Typography>
+      </div>
+      <div className={styles.detail}>
+        <Typography className={styles['detail-title']}  variant="body2">Email:</Typography>
+        <Typography variant="body2">{lead?.email}</Typography>
+      </div>
+      <div className={styles.detail}>
+        <Typography className={styles['detail-title']}  variant="body2">Phone number:</Typography>
+        <Typography variant="body2">{lead?.phone}</Typography>
+      </div>
+      <div className={styles.detail}>
+        <Typography className={styles['detail-title']}  variant="body2">Address:</Typography>
+        <Typography variant="body2">{lead?.address}</Typography>
+      </div>
+      <div className={styles.detail}>
+        <Typography className={styles['detail-title']}  variant="body2">Postal code:</Typography>
+        <Typography variant="body2">{lead?.postalCode}</Typography>
+      </div>
+      <div className={styles.detail}>
+        <Typography className={styles['detail-title']}  variant="body2">City:</Typography>
+        <Typography variant="body2">{lead?.city}</Typography>
+      </div>
     </div>
   );
 };

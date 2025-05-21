@@ -10,12 +10,12 @@ export default async function Page({
   const { slug } = await params;
 
   return (
-    <div>
-      <header className={styles.header}>
-        <Typography variant="h1">Submited form</Typography>
-      </header>
-
+    <div className={styles.root}>
       <main className={styles.main}>
+        <div className={styles.banner}>
+          <Typography variant="h1" className={styles.msg}>Thank you for submitting</Typography>
+        </div>
+
         <Lead leadId={slug} />
       </main>
     </div>

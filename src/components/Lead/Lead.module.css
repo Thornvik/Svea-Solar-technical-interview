@@ -1,10 +1,13 @@
 .root {
   display: grid;
-  max-width: 800px;
+  gap: var(--space-100);
 }
 
-@media screen and (min-width: 860px) {
-  .root {
-    grid-template-columns: 1fr 1fr;
-  }
+.detail {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detail-title {
+  color: grey;
 }

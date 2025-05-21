@@ -15,7 +15,7 @@
 
 .banner {
   border-radius: 16px;
-  background-image: url('../../public//solar-panels.jpg');
+  background-image: url('../../public//solar-panels.png');
   background-size: cover;
   color: white;
   padding: var(--space-200);
