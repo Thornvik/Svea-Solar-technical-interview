@@ -13,6 +13,10 @@
   gap: var(--space-100);
 }
 
+.submit {
+  margin-top: var(--space-100);
+}
+
 @media screen and (min-width: 860px) {
   .calculator {
     grid-template-columns: 1fr 1fr;
@@ -31,6 +35,10 @@
   }
 
   .address {
+    grid-column: span 2;
+  }
+
+  .submit {
     grid-column: span 2;
   }
 }
