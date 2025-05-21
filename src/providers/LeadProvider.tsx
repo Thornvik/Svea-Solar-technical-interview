@@ -1,27 +1,8 @@
+import { Lead, LeadFieldEnum } from "@/types/lead";
 import isValidEmail from "@/utils/isValidEmail";
 import isValidPhoneNumber from "@/utils/isValidPhoneNumber";
 import isValidPostalCode from "@/utils/isValidPostalCode";
 import { createContext, ReactNode, useState } from "react";
-
-interface Lead {
-  firstName: string;
-  lastName: string;
-  email: string;
-  phone: string;
-  address: string;
-  postalCode: string;
-  city: string;
-}
-
-export enum LeadFieldEnum {
-  FIRST_NAME = "firstName",
-  LAST_NAME = "lastName",
-  EMAIL = "email",
-  PHONE = "phone",
-  ADDRESS = "address",
-  POSTAL_CODE = "postalCode",
-  CITY = "city",
-}
 
 interface LeadContextValue {
   lead: Lead;
